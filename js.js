@@ -10,11 +10,11 @@ function covid() {
 
   fetch(url1)
     .then((response) => response.json())
-    .then((data) => {
-     // let d = data;
+    .then((e) => {
+      // let d = data;
 
-      let s = data.data.summary;
-      console.log(data);
+      let s = e.data.summary;
+      console.log(e);
 
       total.innerHTML = s.total;
       recover.innerHTML = s.discharged;
@@ -24,20 +24,38 @@ function covid() {
     });
 }
 
-
 function getStateTable() {
-    let url1 = "https://api.rootnet.in/covid19-in/stats/latest";
+  let url1 = "https://api.rootnet.in/covid19-in/stats/latest";
 
-    fetch(url1).then((response) => response.json()).then((data)=> {
+  fetch(url1)
+    .then((response) => response.json())
+    .then((e) => {
+      let s1 = e.data.regional;
+
+      console.log(s1);
+
+      let str = "";
+
+      Array.from(s1).forEach((element) => {
+        let tablehtml = `<table class="table">
+    
        
+        <tbody>
+          <tr>
+            <td>${element.loc}</td>
+            <td>${element.confirmedCasesIndian}</td>
+            <td>${element.confirmedCasesIndian-element.discharged -element.deaths}</td>
+            <td>${element.discharged}</td>
+            <td>${element.deaths}</td>
+          </tr>
+         </tbody>
+      </table>`;
 
-       console.log();
-       
+        str += tablehtml;
+      });
 
-
-
-
+      document.getElementById("stateTable").innerHTML = str;
     });
-
 }
 
+getStateTable();

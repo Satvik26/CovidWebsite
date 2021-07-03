@@ -35,9 +35,7 @@
                 >India</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="All.html">All Countries</a>
-            </li>
+           
             <li class="nav-item">
               <a class="nav-link" href="Globally.html">Globally</a>
             </li>
@@ -176,7 +174,20 @@
       </div>
     </div>
 
-    <div class="stateTable"></div>
+    <div class="container" id="sTablemain">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">State/ UT</th>
+            <th scope="col">Confirmed</th>
+            <th scope="col">Active</th>
+            <th scope="col">Recovered</th>
+            <th scope="col">Deceased</th>
+          </tr>
+        </thead>
+        <tbody id="stateTable"></tbody>
+      </table>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

@@ -7,10 +7,10 @@ padding : 0px;
 
 body {
     background-image: url('/Images/img1.jpg') ;
-    background-size: contain;
+    background-attachment: fixed;
     background-size: 100vw 120vh;
     background-repeat: no-repeat;
-   position: sticky;
+  
      
 }  
 
@@ -48,12 +48,12 @@ flex : 25%;
 @media only screen and (max-width: 700px) {
 
 
-   body {
+    body {
         background-image: url('/Images/img1.jpg') ;
-        background-size: contain;
+        background-attachment: fixed;
         background-size: 100vw 120vh;
         background-repeat: no-repeat;
-   
+     
          
     } 
 
@@ -124,7 +124,18 @@ flex : 25%;
     
 }
 
+#sTablemain {
 
+    margin-top: 30px;
+    margin-bottom: 0%;
+
+    border : 1px solid red;
+}
+
+#sTablemain  td {
+
+    color : #ffffff;
+}
 
 
 
