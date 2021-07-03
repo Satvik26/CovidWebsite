@@ -1,0 +1,132 @@
+* , #mainBody {
+margin :0px;
+padding : 0px;
+
+}
+
+
+body {
+    background-image: url('/Images/img1.jpg') ;
+    background-size: contain;
+    background-size: 100vw 120vh;
+    background-repeat: no-repeat;
+   position: sticky;
+     
+}  
+
+nav{
+ 
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+  .accordion {
+display: flex;
+justify-content: space-around;
+padding : 20px;
+flex : 25%;
+
+
+} 
+
+ .accordion-button {
+
+   
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding : 40px;
+ }
+
+ .accordion-body {
+
+    padding: 40px;
+ }
+
+
+
+
+@media only screen and (max-width: 700px) {
+
+
+   body {
+        background-image: url('/Images/img1.jpg') ;
+        background-size: contain;
+        background-size: 100vw 120vh;
+        background-repeat: no-repeat;
+   
+         
+    } 
+
+   .accordion {
+
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+   }
+  }
+
+ /* .accordion-button {
+
+    color : #000000;
+    flex : 50%;
+   
+
+} */
+
+#btn1, #total{
+    
+    color: red ;
+
+  
+
+}
+#btn1:hover {
+
+    background-color: #FF7F7F;
+    
+}
+
+#btn2 , #active {
+
+    color : blue;
+}
+
+
+#btn2:hover {
+
+    background-color: lightskyblue;
+    
+}
+
+
+ #btn3 , #recover {
+    color:lightgreen;
+
+ }
+ #btn3:hover  {
+
+    background-color: green ;
+    
+}
+
+
+
+#btn4 , #death  {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color : grey;
+
+}
+
+#btn4:hover  {
+
+    background-color: darkgray ;
+    
+}
+
+
+
+
+
+
+
