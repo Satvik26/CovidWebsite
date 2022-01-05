@@ -8,7 +8,7 @@ padding : 0px;
 
 
 body {
-    background-image: url('/Images/img1.jpg') ;
+    background-image: url('/Images/1.jfif') ;
     background-attachment: fixed;
     background-size: 100vw 120vh;
     background-repeat: no-repeat;
@@ -132,7 +132,7 @@ flex : 25%;
     margin-top: 30px;
     margin-bottom: 0%;
 
-    border : 1px solid red;
+     border : 1px solid #fff;
 }
 
 #sTablemain  td {

@@ -24,6 +24,31 @@ function covid() {
     });
 }
 
+
+function covidGlobal() {
+  let totalGlobal = document.getElementById("totalGlobal");
+  let recoverGlobal = document.getElementById("recoverGlobal");
+  let activeGlobal = document.getElementById("activeGlobal");
+  let deathGlobal = document.getElementById("deathGlobal");
+
+  let url2 = "https://api.covid19api.com/summary";
+
+  fetch(url2)
+    .then((response) => response.json())
+    .then((e) => {
+      // let d = data;
+
+      let s = e.Global;
+      console.log(e);
+
+      totalGlobal.innerHTML = s.TotalConfirmed;
+      recoverGlobal.innerHTML = s.discharged;
+      deathGlobal.innerHTML = s.deaths;
+      activeGlobal.innerHTML =
+        parseInt(s.total) - parseInt(s.discharged) - parseInt(s.deaths);
+    });
+}
+
 function getStateTable() {
   let url1 = "https://api.rootnet.in/covid19-in/stats/latest";
 
